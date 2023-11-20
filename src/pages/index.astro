@@ -1,9 +1,58 @@
 ---
+import P from "../components/P.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<MainLayout title='Inicio'>
-    <h1>Hola we</h1>
+<MainLayout title="Inicio">
+    <article class="relative">
+        <div class="w-full ms-auto me-auto ps-4 pe-4 max-w-[60ch]">
+            <div
+                class="p-3 mb-6 bg-[rgba(255,255,255,.36)] text-center rounded-lg"
+            >
+                Hola, soy Jerson David Silva Arjona, soy de Colombia
+            </div>
+            <div class="md:flex">
+                <div class="flex-grow">
+                    <h2 class="text-4xl font-bold">Daviardev</h2>
+                    <p>Un gran apasioado por la programación web.</p>
+                </div>
+                <div class="flex-grow-0 mt-4 md:mt-0 md:ml-6 items-center">
+                    <img
+                        src="/daviardev.jpg"
+                        width="100%"
+                        height="100%"
+                        class="border-[rgba(255,255,255,.80)] border-[2px] border-solid inline-block max-w-full rounded-full w-full h-full"
+                        alt="Jerson David Silva Arjona"
+                    />
+                </div>
+            </div>
+            <section class="mb-6">
+                <h3
+                    class="font-bold text-xl leading-[1.33] mt-3 mb-4"
+                    style="text-decoration: underline 4px rgb(82,82,82); text-underline-offset: 6px;"
+                >
+                    Sobre mi
+                </h3>
+            </section>
+            <P>
+                Soy un Programador Web, me apasiona la programación en todos sus
+                aspectos, pero me especializo en el lado del cliente. Por lo
+                general uso Framework y librerías de JavaScript como Next.js y
+                React.js para crear mis proyectos. Me gusta ayudar a los demás,
+                seguir aprendiendo y no parar de aprender.
+            </P>
+            <div class="my-4 flex justify-center">
+                <a href="/proyectos">
+                    <button>
+                        Mis proyectos
+                        <span class="inline-block self-center flex-shrink-0 ms-0.5">
+                            <svg viewBox="0 0 24 24" focusable="false" class="w-[1em] h-[1em] inline-block leading-[1em] text-current" aria-hidden="true"><path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
+                        </span>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </article>
 </MainLayout>
 
 <style>
@@ -11,5 +60,45 @@ import MainLayout from "../layouts/MainLayout.astro";
         font-size: 34px;
         text-align: center;
         color: black;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+
+    button {
+        display: inline-flex;
+        appearance: none;
+        -moz-box-align: center;
+        align-items: center;
+        -moz-box-pack: center;
+        justify-content: center;
+        user-select: none;
+        position: relative;
+        white-space: nowrap;
+        vertical-align: middle;
+        outline: transparent solid 2px;
+        outline-offset: 2px;
+        line-height: 1.2;
+        border-radius: .375rem;
+        font-weight: 600;
+        transition-property: background-color;
+        transition-duration: 200ms;
+        height: 2.5rem;
+        min-width: 2.5rem;
+        font-size: 1rem;
+        padding-inline-start: 1rem;
+        padding-inline-end: 1rem;
+        background: #319795;
+        color: #fff;
+
+        &:hover {
+            background-color: #207c7b;
+        }
+
+        &:active {
+            background-color: #1f5e5d;
+        }
     }
 </style>
