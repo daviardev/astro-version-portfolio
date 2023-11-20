@@ -1,11 +1,15 @@
 ---
 import P from "../components/P.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import HeadingTitle from "../components/HeadingTitle.astro";
+import BioSection from "../components/Bio/BioSection.astro";
+import BioYear from "../components/Bio/BioYear.astro";
+import ButtonLink from "../components/ButtonLink.astro";
 ---
 
 <MainLayout title="Inicio">
     <article class="relative">
-        <div class="w-full ms-auto me-auto ps-4 pe-4 max-w-[60ch]">
+        <div class="w-full ms-auto me-auto ps-4 pe-4 max-w-[50ch]">
             <div
                 class="p-3 mb-6 bg-[rgba(255,255,255,.36)] text-center rounded-lg"
             >
@@ -27,30 +31,59 @@ import MainLayout from "../layouts/MainLayout.astro";
                 </div>
             </div>
             <section class="mb-6">
-                <h3
-                    class="font-bold text-xl leading-[1.33] mt-3 mb-4"
-                    style="text-decoration: underline 4px rgb(82,82,82); text-underline-offset: 6px;"
-                >
+                <HeadingTitle>
                     Sobre mi
-                </h3>
+                </HeadingTitle>
+                <P>
+                    Soy un Programador Web, me apasiona la programación en todos sus
+                    aspectos, pero me especializo en el lado del cliente. Por lo
+                    general uso Framework y librerías de JavaScript como Next.js y
+                    React.js para crear mis proyectos. Me gusta ayudar a los demás,
+                    seguir aprendiendo y no parar de aprender.
+                </P>
+                <div class="my-4 flex justify-center">
+                    <a href="/proyectos">
+                        <button>
+                            Mis proyectos
+                            <span class="inline-block self-center flex-shrink-0 ms-0.5">
+                                <svg viewBox="0 0 24 24" focusable="false" class="w-[1em] h-[1em] inline-block leading-[1em] text-current" aria-hidden="true"><path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
+                            </span>
+                        </button>
+                    </a>
+                </div>
             </section>
-            <P>
-                Soy un Programador Web, me apasiona la programación en todos sus
-                aspectos, pero me especializo en el lado del cliente. Por lo
-                general uso Framework y librerías de JavaScript como Next.js y
-                React.js para crear mis proyectos. Me gusta ayudar a los demás,
-                seguir aprendiendo y no parar de aprender.
-            </P>
-            <div class="my-4 flex justify-center">
-                <a href="/proyectos">
-                    <button>
-                        Mis proyectos
-                        <span class="inline-block self-center flex-shrink-0 ms-0.5">
-                            <svg viewBox="0 0 24 24" focusable="false" class="w-[1em] h-[1em] inline-block leading-[1em] text-current" aria-hidden="true"><path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
-                        </span>
-                    </button>
-                </a>
-            </div>
+            <section class="mb-6">
+                <HeadingTitle>
+                    Biografía
+                </HeadingTitle>
+                <BioSection><BioYear>1999</BioYear>Nací en Santa Marta / Colombia</BioSection>
+                <BioSection><BioYear>2020 / 2022</BioYear>Estudié programación web por mi cuenta</BioSection>
+                <BioSection><BioYear>2022</BioYear>Me gradué como técnico profesional en sistemas informáticos en la unibarranquilla (ITSA)</BioSection>
+                <BioSection><BioYear>2023</BioYear>Estudié programación de software en el SENA</BioSection>
+                <BioSection><BioYear>2023 / 2024</BioYear>Hice mis prácticas en la empresa Trading Group en el área TI</BioSection>
+            </section>
+
+            <section class="mb-6">
+                <HeadingTitle>
+                    Me ♥
+                </HeadingTitle>
+
+                <P>Programación web, música, JS, ReactJS, Astro</P>
+            </section>
+
+            <section class="mb-6">
+                <HeadingTitle>
+                    Puedes encontrarme en
+                </HeadingTitle>
+
+                <ul>
+                    <li>
+                        <ButtonLink path="https://github.com/daviardev" icon="">
+                            daviardev
+                        </ButtonLink>
+                    </li>
+                </ul>
+            </section>
         </div>
     </article>
 </MainLayout>
