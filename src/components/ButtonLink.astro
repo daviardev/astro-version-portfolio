@@ -1,15 +1,13 @@
 ---
 interface Props {
-    icon: string;
     path: string;
 }
 
-const { icon, path } = Astro.props;
+const { path } = Astro.props;
 ---
 
 <a href={path} target="_blank">
     <button type="button" class="button-link">
-        <span class="inline-flex self-center flex-shrink-0 me-2">{icon}</span>
         <slot />
     </button>
 </a>
