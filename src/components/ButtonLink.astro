@@ -1,0 +1,46 @@
+---
+interface Props {
+    icon: string;
+    path: string;
+}
+
+const { icon, path } = Astro.props;
+---
+
+<a href={path} target="_blank">
+    <button type="button" class="button-link">
+        <span class="inline-flex self-center flex-shrink-0 me-2">{icon}</span>
+        <slot />
+    </button>
+</a>
+
+<style>
+    .button-link {
+        display: inline-flex;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        user-select: none;
+        position: relative;
+        white-space: nowrap;
+        vertical-align: middle;
+        outline: transparent solid 2px;
+        outline-offset: 2px;
+        line-height: 1.2;
+        border-radius: 0.375rem;
+        font-weight: 600;
+        transition-property: background-color;
+        transition-duration: 200ms;
+        height: 2.5rem;
+        min-width: 2.5rem;
+        font-size: 1rem;
+        padding-inline-start: 1rem;
+        padding-inline-end: 1rem;
+        color: #2c7a7b;
+        background: transparent;
+
+        &:hover {
+            background-color: #2c7a7b3a;
+        }
+    }
+</style>
