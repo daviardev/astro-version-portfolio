@@ -1,39 +1,64 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import WorkGridItem from '../components/GridItem/WorkGridItem.astro'
+import WorkGridItem from "../components/GridItem/WorkGridItem.astro";
 ---
 
-<MainLayout title='Proyectos'>
+<MainLayout title="Proyectos">
     <article class="relative">
         <div class="w-full ms-auto me-auto ps-4 pe-4 max-w-[50ch]">
             <h3 class="md:leading-[1.2] text-xl font-bold mb-4">Proyectos</h3>
-            <div class="grid gap-6 template">
+            <div class="grid gap-6 grid-cols-1 md:grid-cols-2 sm:grid-cols-1">
                 <section class="mb-6">
-                    <WorkGridItem>
-
+                    <WorkGridItem
+                        id="finderdev"
+                        title="Finderdev"
+                        thumbnail="https://midu.dev/images/wallpapers/una-taza-de-javascript.png"
+                    >
+                        Aplicacion que busca entre los perfiles de usuario de
+                        GitHub
+                    </WorkGridItem>
+                </section>
+                <section class="mb-6">
+                    <WorkGridItem
+                        id="finderdev"
+                        title="Finderdev"
+                        thumbnail="https://midu.dev/images/wallpapers/una-taza-de-javascript.png"
+                    >
+                        Aplicacion que busca entre los perfiles de usuario de
+                        GitHub
+                    </WorkGridItem>
+                </section>
+                <section class="mb-6">
+                    <WorkGridItem
+                        id="finderdev"
+                        title="Finderdev"
+                        thumbnail="https://midu.dev/images/wallpapers/una-taza-de-javascript.png"
+                    >
+                        Aplicacion que busca entre los perfiles de usuario de
+                        GitHub
+                    </WorkGridItem>
+                </section>
+                <section class="mb-6">
+                    <WorkGridItem
+                        id="finderdev"
+                        title="Finderdev"
+                        thumbnail="https://midu.dev/images/wallpapers/una-taza-de-javascript.png"
+                    >
+                        Aplicacion que busca entre los perfiles de usuario de
+                        GitHub
+                    </WorkGridItem>
+                </section>
+                <section class="mb-6">
+                    <WorkGridItem
+                        id="finderdev"
+                        title="Finderdev"
+                        thumbnail="https://midu.dev/images/wallpapers/una-taza-de-javascript.png"
+                    >
+                        Aplicacion que busca entre los perfiles de usuario de
+                        GitHub
                     </WorkGridItem>
                 </section>
             </div>
         </div>
     </article>
 </MainLayout>
-
-<style>
-    @media screen and (min-width: 48em) {
-        .template {
-            grid-template-columns: repeat(2, minmax(0px, 1fr));
-        }
-    }
-
-    @media screen and (min-width: 30em) {
-        .template {
-            grid-template-columns: repeat(1, minmax(0px, 1fr));
-        }
-    }
-
-    .template {
-        display: grid;
-        grid-row-gap: 1.5rem;
-        grid-template-columns: repeat(1, minmax(0px, 1fr));
-    }
-</style>

@@ -1,6 +1,6 @@
 ---
 interface Props {
-    id: number,
+    id: string,
     title: string,
     thumbnail: string
 }
@@ -10,14 +10,19 @@ const { id, title, thumbnail } = Astro.props
 
 <div class="w-full flex justify-center">
     <a href={`/proyectos/${id}`}>
-        <div class="relative">
+        <div class="relative cursor-pointer">
             <img
                 src={thumbnail}
                 title={title}
                 class="rounded-xl"
                 loading="lazy"
             />
-            <a href=""></a>
+            <a href={`/proyectos/${id}`} class="static">
+                <p class="mt-2 text-xl">
+                    {title}
+                </p>
+            </a>
+            <slot />
         </div>
     </a>
 </div>
