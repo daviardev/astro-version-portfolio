@@ -1,0 +1,25 @@
+---
+interface Props {
+    href: string;
+    title: string;
+    thumbnail: string;
+}
+
+const { href, title, thumbnail } = Astro.props;
+---
+
+<div class="w-full relative">
+    <center>
+        <a class="relatuve cursor-pointer" href={href} target="_blank">
+            <img
+                class='rounded-xl'
+                alt={title}
+                src={thumbnail}
+                loading="lazy"
+            />
+            <p class="mt-2">
+                {title}
+            </p>
+        </a>
+    </center>
+</div>
