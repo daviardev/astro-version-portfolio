@@ -1,0 +1,80 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Página no encontrada 404">
+    <article class="relative">
+        <div class="w-full ms-auto me-auto ps-4 max-w-[50ch]">
+            <h1>Página no encontrada</h1>
+            <p>La página a la que intenta acceder no fue encontrada</p>
+
+            <hr>
+
+            <div class="my-4 flex justify-center">
+                <a href="/">
+                    <button>
+                        Regresar al inicio
+                    </button>
+                </a>
+            </div>
+        </div>
+    </article>
+</MainLayout>
+
+<style>
+    @media screen and (min-width: 768px) {
+        h1 {
+            font-size: 2.25rem;
+            line-height: 1.2;       
+        }
+    }
+
+    h1 {
+        font-size: 1.875rem;
+        line-height: 1.33;
+        font-weight: bold;
+    }
+
+    p {
+        @apply font-medium;
+    }
+
+    hr {
+        @apply opacity-5 w-full my-6;
+    }
+
+    button {
+        display: inline-flex;
+        appearance: none;
+        -moz-box-align: center;
+        align-items: center;
+        -moz-box-pack: center;
+        justify-content: center;
+        user-select: none;
+        position: relative;
+        white-space: nowrap;
+        vertical-align: middle;
+        outline: transparent solid 2px;
+        outline-offset: 2px;
+        line-height: 1.2;
+        border-radius: .375rem;
+        font-weight: 600;
+        transition-property: background-color;
+        transition-duration: 200ms;
+        height: 2.5rem;
+        min-width: 2.5rem;
+        font-size: 1rem;
+        padding-inline-start: 1rem;
+        padding-inline-end: 1rem;
+        background: #319795;
+        color: #fff;
+
+        &:hover {
+            background-color: #207c7b;
+        }
+
+        &:active {
+            background-color: #1f5e5d;
+        }
+    }
+</style>
