@@ -1,4 +1,5 @@
 ---
+import P from "../../components/P.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 ---
 
@@ -6,8 +7,91 @@ import MainLayout from "../../layouts/MainLayout.astro";
     <article class="relative">
         <div class="w-full ms-auto me-auto max-w-[60ch] ps-4 pe-4">
             <div>
-                <a href="" class=""></a>
+                <a href="/proyectos">Proyectos</a>
+                {' '}
+                <span>
+                    <svg
+                        viewBox="0 0 24 24"
+                        focusable="false"
+                    >
+                        <path
+                            fill="currentColor"
+                            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                        ></path>
+                    </svg>
+                </span>
+                {' '}
+                <h3 class="inline-block font-bold mb-4 text-[20px] md:leading-[1.2]">
+                    finderdev
+                    <span class='whitespace-nowrap inline-block align-middle ps-1 pe-1 uppercase text-xs rounded-sm font-bold bg-gray-100 text-gray-800'>
+                        2022
+                    </span>
+                </h3>
             </div>
+            <P>Aplicacion para buscar perfiles de GitHub.</P>
+            <ul class="ml-4 my-4">
+                <li>
+                    <span class="whitespace-nowrap inline-block align-middle ps-1 pe-1 uppercase text-xs rounded-sm font-bold bg-green-100 text-green-800 mr-2">
+                        deploy
+                    </span>
+                    <a
+                        href="https://finderdev.vercel.app/"
+                        target="_blank"
+                    >
+                        https://finderdev.vercel.app/
+                        <svg
+                            viewBox="0 0 24 24"
+                            focusable="false"
+                        >
+                            <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-width="2"
+                            >
+                            <path
+                                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <path
+                                    d="M15 3h6v6"
+                                ></path>
+                                <path
+                                    d="M10 14L21 3"
+                                ></path>
+                            </g>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <span class="whitespace-nowrap inline-block align-middle ps-1 pe-1 uppercase text-xs rounded-sm font-bold bg-green-100 text-green-800 mr-2">
+                        plataformas
+                    </span>
+                    <span>
+                        Windows/macOS/Linux/iOS/Android
+                    </span>
+                </li>
+                <li>
+                    <span class="whitespace-nowrap inline-block align-middle ps-1 pe-1 uppercase text-xs rounded-sm font-bold bg-green-100 text-green-800 mr-2">
+                        herramientas
+                    </span>
+                    <span>
+                        HTML5, CSS3, JS, API GitHub
+                    </span>
+                </li>
+            </ul>
         </div>
     </article>
 </MainLayout>
+
+<style>
+    a {
+        color: #3d7aed;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    svg {
+		@apply w-[1em] h-[1em] inline-block leading-[1em] align-middle;
+	}
+</style>
