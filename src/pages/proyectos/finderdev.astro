@@ -1,33 +1,16 @@
 ---
 import P from "../../components/P.astro";
+import ProjectIMG from "../../components/Projects/ProjectIMG.astro";
+import Title from '../../components/Projects/Title.astro'
 import MainLayout from "../../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="finderdev">
     <article class="relative">
         <div class="w-full ms-auto me-auto max-w-[60ch] ps-4 pe-4">
-            <div>
-                <a href="/proyectos">Proyectos</a>
-                {' '}
-                <span>
-                    <svg
-                        viewBox="0 0 24 24"
-                        focusable="false"
-                    >
-                        <path
-                            fill="currentColor"
-                            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-                        ></path>
-                    </svg>
-                </span>
-                {' '}
-                <h3 class="inline-block font-bold mb-4 text-[20px] md:leading-[1.2]">
-                    finderdev
-                    <span class='whitespace-nowrap inline-block align-middle ps-1 pe-1 uppercase text-xs rounded-sm font-bold bg-gray-100 text-gray-800'>
-                        2022
-                    </span>
-                </h3>
-            </div>
+            <Title year={2022}>
+                finderdev
+            </Title>
             <P>Aplicacion para buscar perfiles de GitHub.</P>
             <ul class="ml-4 my-4">
                 <li>
@@ -37,6 +20,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
                     <a
                         href="https://finderdev.vercel.app/"
                         target="_blank"
+                        class="text-[rgb(32,122,237)] hover:underline"
                     >
                         https://finderdev.vercel.app/
                         <svg
@@ -78,20 +62,16 @@ import MainLayout from "../../layouts/MainLayout.astro";
                     </span>
                 </li>
             </ul>
+            <ProjectIMG
+                src="/daviardev.jpg"
+                alt="inkdrop"
+            />
         </div>
     </article>
 </MainLayout>
 
 <style>
-    a {
-        color: #3d7aed;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-
     svg {
-		@apply w-[1em] h-[1em] inline-block leading-[1em] align-middle;
-	}
+        @apply w-[.7em] h-[.7em] inline-block leading-[1em] align-middle;
+    }
 </style>

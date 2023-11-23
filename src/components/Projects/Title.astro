@@ -1,0 +1,30 @@
+---
+interface Props {
+    year: number
+}
+
+const { year } = Astro.props
+
+import{ FaAngleRight } from "react-icons/fa6";
+---
+
+<div>
+    <a href="/proyectos" class="text-[rgb(32,122,237)] hover:underline">Proyectos</a>
+    {' '}
+    <span>
+        <FaAngleRight />
+    </span>
+    {' '}
+    <h3 class="inline-block font-bold mb-4 text-base">
+        <slot />
+        <span class='whitespace-nowrap inline-block align-middle ps-1 pe-1 uppercase text-xs rounded-sm font-bold bg-gray-100 text-gray-800'>
+            {year}
+        </span>
+    </h3>
+</div>
+
+<style>
+    svg {
+        @apply w-[.7em] h-[.7em] inline-block leading-[1em] align-middle;
+    }
+</style>
